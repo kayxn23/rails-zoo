@@ -12,7 +12,10 @@
       <%= "Age: #{@animal.age}" %>
     </li>
     <li>
-      <%= image_tag "giraffe.jpg", alt: "Picture of #{@animal.name}" %>
+      <%= image_tag "#{@animal.image_url}", alt: "Picture of #{@animal.name}" %>
     </li>
   </ul>
+  <h4><%= link_to "Edit: #{@animal.name}", edit_animal_path(@animal.id) %></h4>
+  <h4> <%= link_to "Delete", animal_path(@animal.id), method: :delete,  data: { confirm: 'Are you sure?' } %></h4>
+
 <% end %>
