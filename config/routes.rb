@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root "animals#index"
+
   resources :animals, only: [:index, :show, :create, :new]
 
   get '/notfound', to: 'animals#notfound'
