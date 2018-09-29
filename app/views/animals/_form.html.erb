@@ -1,0 +1,16 @@
+<h1> <%=action_name %> </h1>
+
+<%= form_with model: @animal do |f| %>
+  <p>Modify the fields below:</p>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :species %>
+  <%= f.text_field :species %>
+
+  <%= f.label :age %>
+  <%= f.text_field :age %>
+
+  <%= f.submit action_name, class: button_title %>
+<% end %>

@@ -1,0 +1,18 @@
+<% if @animal.nil? %>
+<%= controller.redirect_to "/notfound" %>
+<% else %>
+  <ul>
+    <li>
+      <%= "#{@animal.name}" %>
+    </li>
+    <li>
+      <%= "Species: #{@animal.species}" %>
+    </li>
+    <li>
+      <%= "Age: #{@animal.age}" %>
+    </li>
+    <li>
+      <%= image_tag "giraffe.jpg", alt: "Picture of #{@animal.name}" %>
+    </li>
+  </ul>
+<% end %>

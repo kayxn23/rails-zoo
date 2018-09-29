@@ -1,0 +1,7 @@
+<% @animals.each_with_index do |animal, i| %>
+  <ul>
+    <li>
+      <%= link_to "#{i + 1}. #{animal.name}", animal_path(animal.id) %>
+    </li>
+  </ul>
+<% end %>
